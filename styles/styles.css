@@ -1,1 +1,136 @@
-/* CSS */
+*{
+    margin: 0;
+    padding: 0;
+    font-family: 'Roboto', sans-serif;
+    box-sizing: border-box;
+}
+
+body {
+    background-color: #d1c0a9;
+}
+
+.logo{
+    width: 100px;
+    cursor: pointer;
+    padding-left: 5%;
+    float: left;
+    padding-top: 3%;
+}
+/*door de cursor: pointer krijg je een hand als je met je muis over de logo gaat.*/
+
+.photos{
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr; /*standaard layout*/
+    gap: 5em;    
+    padding-top: 5%;
+    padding-left: 5%;
+    padding-right: 5%;
+    padding-bottom: 10%;
+    width: 100%;
+    justify-content: center;
+    color:white;
+    list-style: none;
+}
+
+
+.navbar{
+    flex: 1;
+    text-align: right;
+    padding-top: 40px;
+    padding-right: 40px;
+    font-size: 20px;
+}
+
+nav ul li{
+    list-style: none;
+    display: inline-block;
+}
+/*Met list: style none krijg je geen puntjes op je lijst*/
+
+
+nav ul li a{
+ text-decoration: none;
+ color: #fff;
+}
+/*Hiermee heb ik de opmaak gemaakt van de tekst in de navbar kleur: wit, geen onderlijning en tekstgrootte 12*/
+
+@media only screen and (max-width: 480px) {
+    nav{
+        font-size: 10px;
+    }
+}
+
+@media only screen and (max-width: 480px) {
+   .logo{
+        width: 100px;
+   }
+}
+
+.style{
+    text-align: center;
+    padding-left: 120px;
+
+
+}
+
+
+
+
+@media only screen and (max-width: 480px) {
+    h1{
+        font-size: 20px;
+        text-align: center;
+        padding-left: 120px;
+    }
+ }
+
+main {
+    width: 100%;
+}
+
+.photos{
+    display: grid;
+    grid-template-columns: 2fr 2fr 2fr; /*standaard layout*/
+    gap: 5em;    
+    padding-top: 60%;
+    padding-left: 10%;
+    padding-right: 5%;
+    padding-bottom: 10%;
+    width: 100%;
+    justify-content: center;
+    color:white;
+    list-style: none;
+}
+
+@media only screen and (max-width: 480px) {
+    .photos{
+        display: grid;
+        grid-template-columns: 1fr 1fr; /*voor middelgrote schermen: bij een breakdownpoint van 250px komen de plaatjes onder elkaar */
+        place-items: center;
+    }
+}
+
+@media only screen and (max-width: 250px) {
+    .photos{
+        display: grid;
+        grid-template-columns: 1fr; /*voor kleinere schermen: bij een breakdownpoint van 250px komen de plaatjes onder elkaar */
+        place-items: center;
+    }
+}
+img{
+    width: 100%;
+    border-radius: 10px;
+    cursor: pointer;
+}
+
+img:hover{
+    transform: translateY(-10px);
+}
+
+
+.footer p{
+    margin-top: 1em;
+    color: #fff;
+    text-align: center;
+    padding-bottom: 30px;
+}
