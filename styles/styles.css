@@ -1,132 +1,157 @@
-*{
-    margin: 0;
-    padding: 0;
-    font-family: 'Roboto', sans-serif;
-    box-sizing: border-box;
+* {
+	box-sizing:border-box;	
 }
+
+html {
+	height:100dvh;	
+}
+
+/*.navbar {
+	position: static;
+	padding: 5px;
+	font-size: 5px;
+}*/
+
+/* style{
+	position:sticky;
+	top:0;
+	background-color: rgb(255, 255, 255);
+	padding: 5px;
+	font-size: 5px;
+	} */
 
 body {
-    background-color: #d1c0a9;
-}
-
-.logo{
-    width: 100px;
-    cursor: pointer;
-    padding-left: 5%;
-    float: left;
-    padding-top: 3%;
-}
-/*door de cursor: pointer krijg je een hand als je met je muis over de logo gaat.*/
-
-.photos{
-    /* display: grid;
-    grid-template-columns: 1fr 1fr 1fr; 
-    gap: 5em;    
-    padding-top: 5%;
-    padding-left: 5%;
-    padding-right: 5%;
-    padding-bottom: 10%;
-    width: 100%;
-    justify-content: center;
-    color:white;
-    list-style: none; */
+	min-height:100%;
+	margin: 0vw;
+	padding: 0vw;
+	background-color:#ffffff;
+	display:grid;	
 }
 
 
-.navbar{
-    flex: 1;
-    text-align: right;
-    padding-top: 40px;
-    padding-right: 40px;
-    font-size: 20px;
-}
-
-nav ul li{
-    list-style: none;
-    display: inline-block;
-}
-/*Met list: style none krijg je geen puntjes op je lijst*/
 
 
-nav ul li a{
- text-decoration: none;
- color: #fff;
-}
-/*Hiermee heb ik de opmaak gemaakt van de tekst in de navbar kleur: wit, geen onderlijning en tekstgrootte 12*/
-
-@media only screen and (max-width: 480px) {
-    nav{
-        font-size: 10px;
-    }
-}
-
-@media only screen and (max-width: 480px) {
-   .logo{
-        width: 100px;
-   }
-}
-
-.style{
-    text-align: center;
-    padding-left: 80px;
-}
-
-h1 { 
-@media only screen and (max-width: 480px) {
-        font-size: 20px;
-        text-align: center;
-        padding-left: 120px;
-    }
- }
-
+/*de snap-container*/
 main {
-    width: 100%;
-}
-
-.photos {
-    display: grid;
-    grid-template-columns: 2fr 2fr 2fr; /*standaard layout*/
-    gap: 5em; 
-    padding: 1em 1em 1em 1em;   
-    /* padding-top: 60%;
-    padding-left: 10%;
-    padding-right: 5%;
-    padding-bottom: 10%; */
-    width: 100%;
-    justify-content: center;
-    color:white;
-    list-style: none;
-}
-
-@media only screen and (max-width: 480px) {
-    .photos{
-        display: grid;
-        grid-template-columns: 1fr 1fr; /*voor middelgrote schermen: bij een breakdownpoint van 250px komen de plaatjes onder elkaar */
-        place-items: center;
-    }
-}
-
-@media only screen and (max-width: 250px) {
-    .photos{
-        display: grid;
-        grid-template-columns: 1fr; /*voor kleinere schermen: bij een breakdownpoint van 250px komen de plaatjes onder elkaar */
-        place-items: center;
-    }
-}
-img{
-    width: 100%;
-    border-radius: 10px;
-    cursor: pointer;
-}
-
-img:hover{
-    transform: translateY(-10px);
+	position:relative;
+	
+	background-color:pink;
+	
+	overflow:auto;
+	scroll-snap-type:both mandatory;
+	overscroll-behavior:contain;
 }
 
 
-.footer p{
-    margin-top: 1em;
-    color: #fff;
-    text-align: center;
-    padding-bottom: 30px;
+/*de lijst*/
+ul {	
+	margin:0;
+	padding:1em;
+	list-style:none;
+	position:absolute;
+	width:700em;
+
+	background-color:#fff;
+
+	columns:47;
 }
+
+
+/*een foto//
+//*de foto's snappen binnen de scroll-container*/
+li {
+	--aspect-ratio:1;
+	
+	margin-bottom:1em;
+	aspect-ratio:var(--aspect-ratio);
+	overflow:hidden;
+	
+	//*alle li's snappen in het midden van de ul*/
+
+	scroll-snap-align:center;
+	background-size:cover;
+	background-position:center;
+}
+
+/*maar alle li's behalve de li met de class hier-starten
+// sanppen wel pas na .5s*/
+li:not(.hier-starten) {
+	/*om te beginnen snappen de li's niet*/
+	@starting-style {
+		scroll-snap-align:none;
+	}
+	
+	/* na de transitie is de starting-style niet meer van toepassing
+	transition-property:scroll-snap-align;
+	transition-delay:.5s;*/
+
+	/*om te zorgen dat scroll-snap-align kan animeren van none naar center;
+	transition-behavior: allow-discrete;*/
+	
+	//*en als @starting-style niet werkt
+	// dan start je gewoon links boven */
+}
+
+
+/*om hier-starten een beetje te highlighten*/
+li.hier-starten {
+	display:grid;
+	place-content:center;
+	place-items:center;
+	
+	border-radius:20em;
+}
+
+li.hier-starten div {
+	background-color:rgb(255, 255, 255);
+	
+	padding:.19em 1em;
+	text-align:center;
+	font-weight:bold;
+}
+
+
+
+/* andere verhoudingen */
+li:nth-of-type(2n) {
+	--aspect-ratio:1.3;
+}
+
+li:nth-of-type(3n) {
+	--aspect-ratio:1.6;
+}
+
+li:nth-of-type(5n) {
+	--aspect-ratio:1.9;
+}
+
+li:nth-of-type(7n) {
+	--aspect-ratio:.8;
+}
+
+li:nth-of-type(9n) {
+	--aspect-ratio:1.7;
+}
+
+
+
+/* plaatjes */
+li:nth-of-type(19n + 1 ) { background-image: url(/assets/photo14.jpeg); }
+li:nth-of-type(19n + 2 ) { background-image: url(/assets/photo17.jpeg); }
+li:nth-of-type(19n + 3 ) { background-image: url(/assets/photo1.jpeg); }
+li:nth-of-type(19n + 4 ) { background-image: url(/assets/photo2.jpeg); }
+li:nth-of-type(19n + 5 ) { background-image: url(/assets/photo3.jpeg); }
+li:nth-of-type(19n + 6 ) { background-image: url(/assets/photo19.jpeg); }
+li:nth-of-type(19n + 7 ) { background-image: url(/assets/photo5.jpeg); }
+li:nth-of-type(19n + 8 ) { background-image: url(/assets/rooftop1.jpeg); }
+li:nth-of-type(19n + 9 ) { background-image: url(/assets/photo18.jpeg); }
+li:nth-of-type(19n + 10) { background-image: url(/assets/rooftop3.jpeg); }
+li:nth-of-type(19n + 11) { background-image: url(/assets/photo14.jpeg); }
+li:nth-of-type(19n + 12) { background-image: url(/assets/photo6.jpeg); }
+li:nth-of-type(19n + 13) { background-image: url(/assets/photo7.jpeg); }
+li:nth-of-type(19n + 14) { background-image: url(/assets/photo8.jpeg); }
+li:nth-of-type(19n + 15) { background-image: url(/assets/photo9.jpeg); }
+li:nth-of-type(19n + 16) { background-image: url(/assets/photo10.jpeg); }
+li:nth-of-type(19n + 17) { background-image: url(/assets/photo11.jpeg); }
+li:nth-of-type(19n + 18) { background-image: url(/assets/photo12.jpeg); }
+li:nth-of-type(19n + 19) { background-image: url(/assets/photo13.jpeg); }
