@@ -11,9 +11,50 @@ html {
 	padding: 5px;
 	font-size: 5px;
 }*/
+header{
+	width: 100%;
+    position: fixed;
+    z-index: 9;
+	background-color: rgb(255, 255, 255);
+}
+nav {
+	scroll-padding-top: 0px;
+	font-size: 16px;
+	background-color:#ffffff;
+	display:grid;	
+
+	ul{
+		display: flex;
+		justify-content: right;
+	}
+
+}
+
+nav  ul li{
+
+	list-style: none;
+
+}
+
+nav ul li a {
+
+	text-decoration: none;
+	color: black;
+	
+}
+/* 
+header {
+	position:fixed;
+	min-height:80%;
+	margin: 20vw;
+	padding: 10vw;
+	background-color:#ffffff;
+	display:grid;	
+
+} */
 
 /* style{
-	position:sticky;
+	position:fixed;
 	top:0;
 	background-color: rgb(255, 255, 255);
 	padding: 5px;
@@ -29,18 +70,16 @@ body {
 }
 
 
-
-
 /*de snap-container*/
 main {
 	position:relative;
 	
-	background-color:pink;
+	background-color:rgb(255, 255, 255);
 	
 	overflow:auto;
 	scroll-snap-type:both mandatory;
 	overscroll-behavior:contain;
-}
+
 
 
 /*de lijst*/
@@ -154,4 +193,5 @@ li:nth-of-type(19n + 15) { background-image: url(/assets/photo9.jpeg); }
 li:nth-of-type(19n + 16) { background-image: url(/assets/photo10.jpeg); }
 li:nth-of-type(19n + 17) { background-image: url(/assets/photo11.jpeg); }
 li:nth-of-type(19n + 18) { background-image: url(/assets/photo12.jpeg); }
-li:nth-of-type(19n + 19) { background-image: url(/assets/photo13.jpeg); }
+li:nth-of-type(19n + 19) { background-image: url(/assets/photo13.jpeg);
+ } }
