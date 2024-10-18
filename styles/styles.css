@@ -175,23 +175,23 @@ li:nth-of-type(9n) {
 
 
 /* plaatjes */
-li:nth-of-type(19n + 1 ) { background-image: url(/assets/photo14.jpeg); }
-li:nth-of-type(19n + 2 ) { background-image: url(/assets/photo17.jpeg); }
-li:nth-of-type(19n + 3 ) { background-image: url(/assets/photo1.jpeg); }
-li:nth-of-type(19n + 4 ) { background-image: url(/assets/photo2.jpeg); }
-li:nth-of-type(19n + 5 ) { background-image: url(/assets/photo3.jpeg); }
-li:nth-of-type(19n + 6 ) { background-image: url(/assets/photo19.jpeg); }
-li:nth-of-type(19n + 7 ) { background-image: url(/assets/photo5.jpeg); }
-li:nth-of-type(19n + 8 ) { background-image: url(/assets/rooftop1.jpeg); }
-li:nth-of-type(19n + 9 ) { background-image: url(/assets/photo18.jpeg); }
-li:nth-of-type(19n + 10) { background-image: url(/assets/rooftop3.jpeg); }
-li:nth-of-type(19n + 11) { background-image: url(/assets/photo14.jpeg); }
-li:nth-of-type(19n + 12) { background-image: url(/assets/photo6.jpeg); }
-li:nth-of-type(19n + 13) { background-image: url(/assets/photo7.jpeg); }
-li:nth-of-type(19n + 14) { background-image: url(/assets/photo8.jpeg); }
-li:nth-of-type(19n + 15) { background-image: url(/assets/photo9.jpeg); }
-li:nth-of-type(19n + 16) { background-image: url(/assets/photo10.jpeg); }
-li:nth-of-type(19n + 17) { background-image: url(/assets/photo11.jpeg); }
-li:nth-of-type(19n + 18) { background-image: url(/assets/photo12.jpeg); }
-li:nth-of-type(19n + 19) { background-image: url(/assets/photo13.jpeg);
+li:nth-of-type(19n + 1 ) { background-image: url(../assets/photo14.jpeg); }
+li:nth-of-type(19n + 2 ) { background-image: url(../assets/photo17.jpeg); }
+li:nth-of-type(19n + 3 ) { background-image: url(../assets/photo1.jpeg); }
+li:nth-of-type(19n + 4 ) { background-image: url(../assets/photo2.jpeg); }
+li:nth-of-type(19n + 5 ) { background-image: url(../assets/photo3.jpeg); }
+li:nth-of-type(19n + 6 ) { background-image: url(../assets/photo19.jpeg); }
+li:nth-of-type(19n + 7 ) { background-image: url(../assets/photo5.jpeg); }
+li:nth-of-type(19n + 8 ) { background-image: url(../assets/rooftop1.jpeg); }
+li:nth-of-type(19n + 9 ) { background-image: url(../assets/photo18.jpeg); }
+li:nth-of-type(19n + 10) { background-image: url(../assets/rooftop3.jpeg); }
+li:nth-of-type(19n + 11) { background-image: url(../assets/photo14.jpeg); }
+li:nth-of-type(19n + 12) { background-image: url(../assets/photo6.jpeg); }
+li:nth-of-type(19n + 13) { background-image: url(../assets/photo7.jpeg); }
+li:nth-of-type(19n + 14) { background-image: url(../assets/photo8.jpeg); }
+li:nth-of-type(19n + 15) { background-image: url(../assets/photo9.jpeg); }
+li:nth-of-type(19n + 16) { background-image: url(../assets/photo10.jpeg); }
+li:nth-of-type(19n + 17) { background-image: url(../assets/photo11.jpeg); }
+li:nth-of-type(19n + 18) { background-image: url(../assets/photo12.jpeg); }
+li:nth-of-type(19n + 19) { background-image: url(../assets/photo13.jpeg);
  } }
