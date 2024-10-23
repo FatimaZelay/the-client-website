@@ -29,7 +29,9 @@ Mijn figma ontwerp ziet er als volgt uit:
 # Feedback vragen
 
 - De website is niet helemaal infinite maar zou dit ook een goede alternatief zijn?
+  antwoord: het is een goed begin, dit ziet er infinite uit probeer ook de foto's te dimmen.
 - Bij het responsive maken van de foto's wanneer je erop klinkt, waar brengt de link naartoe?
+  antwoord: bij het klikken op de foto zal een link je naar meer informatie over de foto leiden.
 
 
 ## Licentie
